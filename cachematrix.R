@@ -1,7 +1,8 @@
 ## Takes a matrix 'x' and creates an object from it that can be used with
-## the 'cacheSolve' function.
+## the 'cacheSolve' function. The object consists of a list of functions to
+## set or retrieve a matrix and its cached inverse.
 makeCacheMatrix <- function(x = matrix()) {
-  s <- NULL
+  s <- NULL ## Stores the cached inverse of x
   set <- function(y) {
     x <<- y
     s <<- NULL
